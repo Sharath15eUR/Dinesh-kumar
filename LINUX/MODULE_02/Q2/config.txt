@@ -1,0 +1,6 @@
+server_name=localhost
+database_host=localhost
+database_name=mydatabase
+username=admin
+password=secret
+api_endpoint=http://localhost/api/v1

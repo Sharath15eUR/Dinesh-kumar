@@ -1,0 +1,4 @@
+-rwxrwx--- 1 root vboxsf 7.6M Feb 17  2022 ./ADIYE.mp3
+-rwxrwx--- 1 root vboxsf 1.9G Aug 27  2019 ./Avengers Endgame (2019).mkv
+-rwxrwx--- 1 root vboxsf 1.7G Aug 20  2018 ./Avengers Infinity War (2018).mkv
+-rwxrwx--- 1 root vboxsf 8.6M Nov  4  2019 ./VALAI_OSAI_SONG.mp3
