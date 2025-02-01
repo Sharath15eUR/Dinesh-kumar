@@ -1,0 +1,13 @@
+dk@dk:~/Documents$ ls -l
+total 8
+-rwxrwxr-x 1 dk dk 10 Jan 30 21:35 file1.txt
+-rw-rw-r-- 1 dk dk  9 Jan 30 21:35 file2.txt
+-rw-rw-r-- 1 dk dk  0 Jan 30 21:35 file3.sh
+-rwxrwxr-x 1 dk dk  0 Feb  1 07:37 samplefile.sh
+dk@dk:~/Documents$ chmod g-w file2.txt
+dk@dk:~/Documents$ ls -l
+total 8
+-rwxrwxr-x 1 dk dk 10 Jan 30 21:35 file1.txt
+-rw-r--r-- 1 dk dk  9 Jan 30 21:35 file2.txt
+-rw-rw-r-- 1 dk dk  0 Jan 30 21:35 file3.sh
+-rwxrwxr-x 1 dk dk  0 Feb  1 07:37 samplefile.sh

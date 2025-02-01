@@ -1,0 +1,6 @@
+server_name=127.0.0.1
+database_host=127.0.0.1
+database_name=mydatabase
+username=admin
+password=secret
+api_endpoint=http://127.0.0.1/api/v1

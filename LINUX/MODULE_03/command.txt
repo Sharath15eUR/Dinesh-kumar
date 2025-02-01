@@ -1,0 +1,11 @@
+dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_03$ ./backup.sh "/media/sf_SHARED/EMBEDUR/LINUX/MODULE_02/Q2" "/media/sf_SHARED/EMBEDUR/LINUX/MODULE_03/backup" ".txt"
+Files to be backed up:
+config.txt - 139 bytes
+updated_config.txt - 139 bytes
+Backup Report
+-------------
+Total files processed: 2
+Total size of files backed up: 1.0K
+Backup directory: /media/sf_SHARED/EMBEDUR/LINUX/MODULE_03/backup
+Backup completed successfully.
+dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_03$ touch command.txt

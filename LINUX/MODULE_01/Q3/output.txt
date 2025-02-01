@@ -1,0 +1,17 @@
+dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3$ mkdir dir1
+dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3$ cd dir1
+dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3/dir1$ mkdir dir2
+dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3/dir1$ cd dir2
+dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3/dir1/dir2$ touch dummy
+dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3/dir1/dir2$ cd ../
+dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3/dir1$ ln -s dir2/dummy shortcut
+ln: failed to create symbolic link 'shortcut': Operation not permitted
+dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3/dir1$ cd ~/Documents
+dk@dk:~/Documents$ ln -s /media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/dir1/dir2/dummy shortcut
+dk@dk:~/Documents$ ls -l
+total 8
+-rwxrwxr-x 1 dk dk 10 Jan 30 21:35 file1.txt
+-rw-r--r-- 1 dk dk  9 Jan 30 21:35 file2.txt
+-rw-rw-r-- 1 dk dk  0 Jan 30 21:35 file3.sh
+-rwxrwxr-x 1 dk dk  0 Feb  1 07:37 samplefile.sh
+lrwxrwxrwx 1 dk dk 56 Feb  1 07:51 shortcut -> /media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/dir1/dir2/dummy
