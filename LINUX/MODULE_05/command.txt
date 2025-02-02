@@ -1,22 +1,28 @@
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_05$ mkdir -p logs
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_05$ touch script.sh
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_05$ nano script.sh
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_05$ ls -l
-total 5
--rwxrwx--- 1 root vboxsf   76 Feb  1 10:29 errors.log
--rwxrwx--- 1 root vboxsf 2490 Feb  1 10:29 file_analyzer.sh
-drwxrwx--- 1 root vboxsf    0 Feb  1 10:32 logs
--rwxrwx--- 1 root vboxsf   82 Feb  1 10:32 script.sh
+dk@dk:/media/sf_SHARED/LINUX/MODULE_05$ chmod +x file_analyzer.sh
+dk@dk:/media/sf_SHARED/LINUX/MODULE_05$ ./file_analyzer.sh --help
+Usage: ./file_analyzer.sh [OPTIONS]
 
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_05$ ./file_analyzer.sh -d logs -k error
-Script name: ./file_analyzer.sh
-Number of arguments: 0
-Exit status of last command: 0
-All arguments: 
+Options:
+  -d <directory>  Search for a keyword recursively in a directory.
+  -f <file>       Search for a keyword in a specific file.
+  -k <keyword>    Keyword to search.
+  --help          Display this help menu.
 
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_05$ ./file_analyzer.sh -f script.sh -k TODO
-Found keyword in file: script.sh
-Script name: ./file_analyzer.sh
-Number of arguments: 0
-Exit status of last command: 0
-All arguments: 
+Examples:
+  ./file_analyzer.sh -d logs -k error
+  ./file_analyzer.sh -f script.sh -k TODO
+
+dk@dk:/media/sf_SHARED/LINUX/MODULE_05$ ./file_analyzer.sh -d /media/sf_SHARED/LINUX/MODULE_03 -k localhost
+Keyword found in file: /media/sf_SHARED/LINUX/MODULE_03/backup/config.txt
+Script executed with exit status: 0
+
+dk@dk:/media/sf_SHARED/LINUX/MODULE_05$ ./file_analyzer.sh -f script.sh -k sample
+Keyword found in file: script.sh
+Script executed with exit status: 0
+
+dk@dk:/media/sf_SHARED/LINUX/MODULE_05$ ./file_analyzer.sh -f script.sh -k x
+No match found in file: script.sh
+Script executed with exit status: 0
+
+dk@dk:/media/sf_SHARED/LINUX/MODULE_05$ ./file_analyzer.sh -f script.sh -k @#
+ERROR: Invalid or empty keyword.
