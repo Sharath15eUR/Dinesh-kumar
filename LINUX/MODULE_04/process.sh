@@ -1,22 +1,19 @@
 #!/bin/bash
 
-input_file="input.txt"
-output_file="output.txt"
+# Check if input is given
+if [ -z "$1" ]; then
+    echo "Usage: $0 <input_file>"
+    exit 1
+fi 
+
+# Assign variables
+INPUT_FILE="$1"
+OUTPUT_FILE="/media/sf_SHARED/LINUX/MODULE_04/output.txt"
 
 # Clear the output file
-> "$output_file"
+> "$OUTPUT_FILE"
 
-# Read input file line by line
-while IFS= read -r line; do
-    # Extract parameters using grep and regex
-    frame_time=$(echo "$line" | grep -oP '(?<=frame.time": ")[^"]*')
-    wlan_fc_type=$(echo "$line" | grep -oP '(?<=wlan.fc.type": ")[^"]*')
-    wlan_fc_subtype=$(echo "$line" | grep -oP '(?<=wlan.fc.subtype": ")[^"]*')
+# Extract required parameters and save to output file
+grep -E '"frame.time"|"wlan.fc.type"|"wlan.fc.subtype"' "$INPUT_FILE" | sed 's/^\s*//' > "$OUTPUT_FILE"
 
-    # If all values are found, write to output file
-    if [[ -n "$frame_time" && -n "$wlan_fc_type" && -n "$wlan_fc_subtype" ]]; then
-        echo "\"frame.time\": \"$frame_time\",\"wlan.fc.type\": \"$wlan_fc_type\",\"wlan.fc.subtype\": \"$wlan_fc_subtype\"" >> "$output_file"
-    fi
-done < "$input_file"
-
-echo "Extraction completed. Check $output_file."
+echo "Extraction completed. Output saved in '$OUTPUT_FILE'"
