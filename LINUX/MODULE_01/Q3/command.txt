@@ -1,9 +1,3 @@
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3$ mkdir dir1
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3$ cd dir1
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3/dir1$ mkdir dir2
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3/dir1$ cd dir2
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3/dir1/dir2$ touch dummy
-dk@dk:/media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/Q3/dir1/dir2$ cd ~/Documents
 dk@dk:~/Documents$ ln -s /media/sf_SHARED/EMBEDUR/LINUX/MODULE_01/dir1/dir2/dummy shortcut
 dk@dk:~/Documents$ ls -l
 total 8

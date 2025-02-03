@@ -1,5 +1,5 @@
 total 0
--rwxrwx--- 1 root vboxsf 0 Feb  1 08:43 sorted_files.txt
--rwxrwx--- 1 root vboxsf 0 Feb  1 08:41 file3.txt
--rwxrwx--- 1 root vboxsf 0 Feb  1 08:41 file2.txt
--rwxrwx--- 1 root vboxsf 0 Feb  1 08:41 file1.txt
+-rwxrwx--- 1 root vboxsf 0 Feb  3 10:37 sorted_files.txt
+-rwxrwx--- 1 root vboxsf 0 Feb  1 21:16 file1.txt
+-rwxrwx--- 1 root vboxsf 0 Feb  1 21:16 file2.txt
+-rwxrwx--- 1 root vboxsf 0 Feb  1 21:16 file3.txt

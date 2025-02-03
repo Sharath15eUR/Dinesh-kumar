@@ -1,0 +1,1 @@
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_01/Q5$ ls -lt dir1 > dir1/sorted_files.txt
