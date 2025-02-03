@@ -8,10 +8,6 @@ Options:
   -k <keyword>    Keyword to search.
   --help          Display this help menu.
 
-Examples:
-  ./file_analyzer.sh -d logs -k error
-  ./file_analyzer.sh -f script.sh -k TODO
-
 dk@dk:/media/sf_SHARED/LINUX/MODULE_05$ ./file_analyzer.sh -d /media/sf_SHARED/LINUX/MODULE_03 -k localhost
 Keyword found in file: /media/sf_SHARED/LINUX/MODULE_03/backup/config.txt
 Script executed with exit status: 0
@@ -26,3 +22,6 @@ Script executed with exit status: 0
 
 dk@dk:/media/sf_SHARED/LINUX/MODULE_05$ ./file_analyzer.sh -f script.sh -k @#
 ERROR: Invalid or empty keyword.
+
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_05$ ./file_analyzer.sh 
+ERROR: No keyword or file specified.

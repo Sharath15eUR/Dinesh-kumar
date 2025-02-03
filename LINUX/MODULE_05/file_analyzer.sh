@@ -2,7 +2,7 @@
 
 # Error log file
 ERROR_LOG="errors.log"
-> "$ERROR_LOG"  # Clearing the contents of error log if present
+#> "$ERROR_LOG"  # Clearing the contents of error log if present
 
 # Help function using Here Document
 show_help(){
@@ -14,10 +14,6 @@ Options:
   -f <file>       Search for a keyword in a specific file.
   -k <keyword>    Keyword to search.
   --help          Display this help menu.
-
-Examples:
-  ./file_analyzer.sh -d logs -k error
-  ./file_analyzer.sh -f script.sh -k TODO
 EOF
 }
 
