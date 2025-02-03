@@ -1,0 +1,2 @@
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_02/Q1$ find . -type f -size +1M > large_files.txt
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_02/Q1$ find . -type f -size +1M -exec ls -lh {} \; > large_files_with_sizes.txt

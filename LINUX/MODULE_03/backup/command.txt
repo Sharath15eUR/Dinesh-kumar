@@ -1,0 +1,1 @@
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_02/Q2$ sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt  

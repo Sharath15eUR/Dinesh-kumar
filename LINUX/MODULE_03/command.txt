@@ -1,11 +1,10 @@
 dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_03$ ./backup_manager.sh "/media/sf_Dinesh-kumar/LINUX/MODULE_02/Q2" "/media/sf_Dinesh-kumar/LINUX/MODULE_03/backup" ".txt"
-
 Files to be backed up:
-config.txt - 139 bytes
-updated_config.txt - 139 bytes
-
+command.txt - 112 bytes
+config.txt - 145 bytes
+updated_config.txt - 145 bytes
 Backup Report:
-Total files processed: 2
-Total size of files backed up: 1.0K
+Total files processed: 1
+Total size of files backed up: 2.0K
 Backup directory: /media/sf_Dinesh-kumar/LINUX/MODULE_03/backup
 Backup completed successfully.

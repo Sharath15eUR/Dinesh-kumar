@@ -1,0 +1,10 @@
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_02/Q5$ ip route
+default via 10.0.2.2 dev enp0s3 proto dhcp metric 100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+169.254.0.0/16 dev enp0s3 scope link metric 1000 
+
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_02/Q5$ ip route | awk '/default/ {print $3}'
+10.0.2.2
+
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_02/Q5$ ip route | awk '/default/ {print $3}' | sort | uniq
+10.0.2.2
