@@ -66,8 +66,7 @@ done
 TOTAL_SIZE=$(du -sh "$BACKUP_DIR" | cut -f1)
 REPORT_FILE="$BACKUP_DIR/backup_report.log"
 
-echo "Backup Report" > "$REPORT_FILE"
-echo "-------------" >> "$REPORT_FILE"
+echo "Backup Report:" > "$REPORT_FILE"
 echo "Total files processed: $BACKUP_COUNT" >> "$REPORT_FILE"
 echo "Total size of files backed up: $TOTAL_SIZE" >> "$REPORT_FILE"
 echo "Backup directory: $BACKUP_DIR" >> "$REPORT_FILE"
