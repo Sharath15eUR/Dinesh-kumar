@@ -22,6 +22,9 @@ Script executed with exit status: 0
 
 dk@dk:/media/sf_SHARED/LINUX/MODULE_05$ ./file_analyzer.sh -f script.sh -k @#
 ERROR: Invalid or empty keyword.
+<<<<<<< HEAD
 
 dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_05$ ./file_analyzer.sh 
 ERROR: No keyword or file specified.
+=======
+>>>>>>> 7ef06ec14876625ba79cdf7b9f073755a6e2e84b
