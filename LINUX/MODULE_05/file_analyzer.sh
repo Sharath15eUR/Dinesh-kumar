@@ -14,10 +14,6 @@ Options:
   -f <file>       Search for a keyword in a specific file.
   -k <keyword>    Keyword to search.
   --help          Display this help menu.
-
-Examples:
-  ./file_analyzer.sh -d logs -k error
-  ./file_analyzer.sh -f script.sh -k TODO
 EOF
 }
 
