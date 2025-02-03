@@ -1,0 +1,9 @@
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_04$ chmod +x fetch.sh
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_04$ ./fetch.sh
+Usage: ./fetch.sh <input_file>
+
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_04$ ./fetch.sh input.txt
+Extraction completed. Output saved in '/media/sf_SHARED/LINUX/MODULE_04/output.txt'
+
+dk@dk:/media/sf_Dinesh-kumar/LINUX/MODULE_04$ wc output.txt | awk '{print "Lines: "$1, "Words: "$2, "Bytes: "$3}'
+Lines: 9675 Words: 38700 Bytes: 377837
