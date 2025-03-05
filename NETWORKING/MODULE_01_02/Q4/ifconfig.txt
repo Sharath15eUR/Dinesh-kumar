@@ -1,0 +1,116 @@
+The ifconfig command is used to configure and display network interfaces. It allows you to view and configure IP addresses, netmasks, and other interface parameters.
+
+1. ifconfig
+
+dk@dk-Vivobook-ASUS:~$ ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 3976  bytes 1202294 (1.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3976  bytes 1202294 (1.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+mpqemubr0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.111.127.1  netmask 255.255.255.0  broadcast 10.111.127.255
+        inet6 fe80::5054:ff:fede:6421  prefixlen 64  scopeid 0x20<link>
+        ether 52:54:00:de:64:21  txqueuelen 1000  (Ethernet)
+        RX packets 4365  bytes 281089 (281.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7278  bytes 17482279 (17.4 MB)
+        TX errors 0  dropped 16 overruns 0  carrier 0  collisions 0
+
+tap-1e376645a40: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::f0ad:1aff:fe43:53e3  prefixlen 64  scopeid 0x20<link>
+        ether f2:ad:1a:43:53:e3  txqueuelen 1000  (Ethernet)
+        RX packets 4366  bytes 342265 (342.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 14569  bytes 17966568 (17.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.31.188  netmask 255.255.255.0  broadcast 192.168.31.255
+        inet6 fe80::18a1:fbf4:1e23:5b70  prefixlen 64  scopeid 0x20<link>
+        inet6 2409:40f4:117:573a:babf:9cd6:ee49:73ad  prefixlen 64  scopeid 0x0<global>
+        inet6 2409:40f4:117:573a:514e:8ff1:a23:fd92  prefixlen 64  scopeid 0x0<global>
+        ether a0:59:50:39:af:fd  txqueuelen 1000  (Ethernet)
+        RX packets 120157  bytes 134349256 (134.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 46081  bytes 12935566 (12.9 MB)
+        TX errors 0  dropped 6 overruns 0  carrier 0  collisions 0
+
+_______________________________________________________________________________________________________________________________________
+
+2. selecting a specific interface and make those stop/RUNNING
+
+dk@dk-Vivobook-ASUS:~$ sudo ifconfig wlo1 down
+
+k@dk-Vivobook-ASUS:~$ ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 4100  bytes 1213124 (1.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4100  bytes 1213124 (1.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+mpqemubr0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.111.127.1  netmask 255.255.255.0  broadcast 10.111.127.255
+        inet6 fe80::5054:ff:fede:6421  prefixlen 64  scopeid 0x20<link>
+        ether 52:54:00:de:64:21  txqueuelen 1000  (Ethernet)
+        RX packets 4368  bytes 281221 (281.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7297  bytes 17484859 (17.4 MB)
+        TX errors 0  dropped 16 overruns 0  carrier 0  collisions 0
+
+tap-1e376645a40: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::f0ad:1aff:fe43:53e3  prefixlen 64  scopeid 0x20<link>
+        ether f2:ad:1a:43:53:e3  txqueuelen 1000  (Ethernet)
+        RX packets 4369  bytes 342439 (342.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 14590  bytes 17969325 (17.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+____________________________________________________________________________________________________________________
+
+3. tweaking mtu
+
+dk@dk-Vivobook-ASUS:~$ sudo ifconfig wlo1 mtu 2000
+dk@dk-Vivobook-ASUS:~$ ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 4260  bytes 1231056 (1.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4260  bytes 1231056 (1.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+mpqemubr0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.111.127.1  netmask 255.255.255.0  broadcast 10.111.127.255
+        inet6 fe80::5054:ff:fede:6421  prefixlen 64  scopeid 0x20<link>
+        ether 52:54:00:de:64:21  txqueuelen 1000  (Ethernet)
+        RX packets 4368  bytes 281221 (281.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7310  bytes 17486856 (17.4 MB)
+        TX errors 0  dropped 16 overruns 0  carrier 0  collisions 0
+
+tap-1e376645a40: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::f0ad:1aff:fe43:53e3  prefixlen 64  scopeid 0x20<link>
+        ether f2:ad:1a:43:53:e3  txqueuelen 1000  (Ethernet)
+        RX packets 4369  bytes 342439 (342.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 14603  bytes 17971322 (17.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 2000
+        inet 192.168.31.188  netmask 255.255.255.0  broadcast 192.168.31.255
+        inet6 fe80::18a1:fbf4:1e23:5b70  prefixlen 64  scopeid 0x20<link>
+        inet6 2409:40f4:117:573a:514e:8ff1:a23:fd92  prefixlen 64  scopeid 0x0<global>
+        ether a0:59:50:39:af:fd  txqueuelen 1000  (Ethernet)
+        RX packets 120989  bytes 134926624 (134.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 46781  bytes 13153667 (13.1 MB)
+        TX errors 0  dropped 13 overruns 0  carrier 0  collisions 0

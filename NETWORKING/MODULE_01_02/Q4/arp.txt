@@ -1,0 +1,37 @@
+The arp command is used to manipulate the ARP (Address Resolution Protocol) cache. It allows you to display and modify the ARP table entries.
+
+1. display arp table (resolves ip address to hostnames) -> -a
+
+dk@dk-Vivobook-ASUS:~$ arp -a
+jiofiber.local.html (192.168.31.1) at d4:4d:9f:aa:84:7c [ether] on wlo1
+? (10.111.127.241) at 52:54:00:a0:c1:b9 [ether] on mpqemubr0
+
+___________________________________________________________________________________________________
+
+2. Display arp table (without resolving ip address to hostnames) -> -n
+
+dk@dk-Vivobook-ASUS:~$ arp -n
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.31.1             ether   d4:4d:9f:aa:84:7c   C                     wlo1
+10.111.127.241           ether   52:54:00:a0:c1:b9   C                     mpqemubr0
+
+____________________________________________________________________________________________________
+
+3. delete an arp entry -> -d <ip>
+
+dk@dk-Vivobook-ASUS:~$ arp -n
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.31.1             ether   d4:4d:9f:aa:84:7c   C                     wlo1
+10.111.127.241           ether   52:54:00:a0:c1:b9   C                     mpqemubr0
+dk@dk-Vivobook-ASUS:~$ arp -n
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.31.1             ether   d4:4d:9f:aa:84:7c   C                     wlo1
+10.111.127.241           ether   52:54:00:a0:c1:b9   C                     mpqemubr0
+dk@dk-Vivobook-ASUS:~$ sudo arp -d 192.168.31.1
+dk@dk-Vivobook-ASUS:~$ arp -n
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.111.127.241           ether   52:54:00:a0:c1:b9   C                     mpqemubr0
+
+________________________________________________________________________________________________________
+
+4. add an entry -> -s <ip> <hw_addr>

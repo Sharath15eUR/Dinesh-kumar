@@ -1,0 +1,9 @@
+1. Open Anydesk
+
+2. Copy the address in "Your desk" section (remote)
+
+3. Paste in "Remote desk" section and connect It (local)
+
+4. The user at remote end must accept the connection
+
+5. For unattended access, you can set up a password on the remote system

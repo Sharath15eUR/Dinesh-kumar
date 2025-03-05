@@ -1,0 +1,86 @@
+The ping command is used to check the network connectivity between two hosts. It sends ICMP Echo Request packets to the target host and listens for ICMP Echo Reply packets.
+
+Parameters:
+
+1. count -> -c 
+
+dk@dk-Vivobook-ASUS:~$ ping -c 2 google.com
+PING google.com (2404:6800:4007:81d::200e) 56 data bytes
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=1 ttl=116 time=46.2 ms
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=2 ttl=116 time=48.2 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 46.156/47.166/48.176/1.010 ms
+
+___________________________________________________________________________________________________
+
+2. interval -> -i (default : 1s)
+
+dk@dk-Vivobook-ASUS:~$ ping -c 2 -i 0.5 google.com
+PING google.com (2404:6800:4002:81c::200e) 56 data bytes
+64 bytes from del11s17-in-x0e.1e100.net (2404:6800:4002:81c::200e): icmp_seq=1 ttl=116 time=83.7 ms
+64 bytes from del11s17-in-x0e.1e100.net (2404:6800:4002:81c::200e): icmp_seq=2 ttl=116 time=81.8 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 501ms
+rtt min/avg/max/mdev = 81.837/82.749/83.662/0.912 ms
+
+____________________________________________________________________________________________________
+
+3. ttl -> -t (here we can't see as the ttl is from server's side indicating 116 hops. But when we wanna set this can be useful)
+
+dk@dk-Vivobook-ASUS:~$ ping -c 2 -t 200 google.com
+PING google.com (2404:6800:4002:82e::200e) 56 data bytes
+64 bytes from del12s10-in-x0e.1e100.net (2404:6800:4002:82e::200e): icmp_seq=1 ttl=116 time=82.9 ms
+64 bytes from del12s10-in-x0e.1e100.net (2404:6800:4002:82e::200e): icmp_seq=2 ttl=116 time=80.6 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 80.636/81.773/82.911/1.137 ms
+
+____________________________________________________________________________________________________
+
+4. packetSize -> -s (128 icmp req pkts sent, 136 [contains header too!] icmp resp pkts received)
+
+dk@dk-Vivobook-ASUS:~$ ping -c 2 -s 128 google.com
+PING google.com (2404:6800:4007:81d::200e) 128 data bytes
+136 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=1 ttl=116 time=46.4 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 1 received, 50% packet loss, time 1002ms
+rtt min/avg/max/mdev = 46.399/46.399/46.399/0.000 ms
+
+________________________________________________________________________________________________________
+
+5. timeout -> -W (here, no effect. If timeouts, pkts are dropped)
+
+dk@dk-Vivobook-ASUS:~$ ping -c 2 -W 2 google.com
+PING google.com (2404:6800:4007:81d::200e) 56 data bytes
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=1 ttl=116 time=32.7 ms
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=2 ttl=116 time=31.9 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 31.859/32.295/32.732/0.436 ms
+
+________________________________________________________________________________________________________
+
+6. deadline -> -w (here, runs for 10 secs)
+
+dk@dk-Vivobook-ASUS:~$ ping -w 10 google.com
+PING google.com (2404:6800:4007:81d::200e) 56 data bytes
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=1 ttl=116 time=44.5 ms
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=2 ttl=116 time=42.6 ms
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=3 ttl=116 time=40.4 ms
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=4 ttl=116 time=38.8 ms
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=5 ttl=116 time=41.8 ms
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=6 ttl=116 time=34.6 ms
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=7 ttl=116 time=33.1 ms
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=8 ttl=116 time=51.9 ms
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=9 ttl=116 time=50.2 ms
+64 bytes from maa05s22-in-x0e.1e100.net (2404:6800:4007:81d::200e): icmp_seq=10 ttl=116 time=48.8 ms
+
+--- google.com ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9016ms
+rtt min/avg/max/mdev = 33.115/42.676/51.912/6.006 ms

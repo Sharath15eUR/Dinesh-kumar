@@ -1,0 +1,21 @@
+What is a Default Gateway?
+A default gateway is a network device, typically a router, that acts as an access point or IP router that a computer uses to send information to another network or the internet. When a device wants to communicate with a device outside its local network, it sends the data to the default gateway, which then forwards it to the appropriate destination.
+
+fetch using -> ip route | grep default
+
+dk@dk-Vivobook-ASUS:~$ ip route | grep default
+default via 192.168.31.1 dev wlo1 proto dhcp src 192.168.31.188 metric 600 
+
+check using -> ping <gateway_ip>
+
+dk@dk-Vivobook-ASUS:~$ ping -c 5 192.168.31.1
+PING 192.168.31.1 (192.168.31.1) 56(84) bytes of data.
+64 bytes from 192.168.31.1: icmp_seq=1 ttl=64 time=5.88 ms
+64 bytes from 192.168.31.1: icmp_seq=2 ttl=64 time=4.60 ms
+64 bytes from 192.168.31.1: icmp_seq=3 ttl=64 time=4.29 ms
+64 bytes from 192.168.31.1: icmp_seq=4 ttl=64 time=4.44 ms
+64 bytes from 192.168.31.1: icmp_seq=5 ttl=64 time=4.24 ms
+
+--- 192.168.31.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4004ms
+rtt min/avg/max/mdev = 4.240/4.691/5.884/0.609 ms

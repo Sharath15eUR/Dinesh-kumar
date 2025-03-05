@@ -1,0 +1,5 @@
+1. Surf the gateway ip
+
+2. Mine - Airfibre Home Gateway
+
+3. In clients section of status tab, connected devices can be viewed

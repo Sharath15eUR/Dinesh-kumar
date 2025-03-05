@@ -1,0 +1,36 @@
+Wireshark Packet Filters:
+
+Wireshark uses filters to help focus on specific packets 
+
+
+**IP Address Filters**
+
+Filter by source IP: ip.src == 192.168.1.1
+
+Filter by destination IP: ip.dst == 192.168.1.1
+_____________________________________________________
+
+**Port Filters**
+
+Filter by source port: tcp.srcport == 80
+
+Filter by destination port: tcp.dstport == 80
+_______________________________________________________
+
+**Protocol Filters**
+
+Filter by protocol: http, tcp, udp, icmp
+_______________________________________________________
+
+**HTTP Filters**
+
+Filter HTTP requests: http.request
+
+Filter HTTP responses: http.response
+_______________________________________________________
+
+**TCP Flags Filters**
+
+Filter SYN packets: tcp.flags.syn == 1
+
+Filter ACK packets: tcp.flags.ack == 1

@@ -1,0 +1,6 @@
+When duplicate IP's are configured in a network,
+
+1. Network conflicts
+2. Packet loss
+3. Security threats occurs
+

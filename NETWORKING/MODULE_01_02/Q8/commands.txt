@@ -1,0 +1,84 @@
+ifconfig is used to configure and manage network interfaces.
+
+dk@dk-Vivobook-ASUS:~$ ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 7193  bytes 799532 (799.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7193  bytes 799532 (799.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+mpqemubr0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.111.127.1  netmask 255.255.255.0  broadcast 10.111.127.255
+        inet6 fe80::5054:ff:febb:ad1d  prefixlen 64  scopeid 0x20<link>
+        ether 52:54:00:bb:ad:1d  txqueuelen 1000  (Ethernet)
+        RX packets 1542  bytes 183090 (183.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1945  bytes 684554 (684.5 KB)
+        TX errors 0  dropped 14 overruns 0  carrier 0  collisions 0
+
+tap-1e376645a40: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::f0ad:1aff:fe43:53e3  prefixlen 64  scopeid 0x20<link>
+        ether f2:ad:1a:43:53:e3  txqueuelen 1000  (Ethernet)
+        RX packets 1543  bytes 204744 (204.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1996  bytes 691192 (691.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.31.188  netmask 255.255.255.0  broadcast 192.168.31.255
+        inet6 2409:40f4:4023:5c6e:5b01:eec9:7306:a76b  prefixlen 64  scopeid 0x0<global>
+        inet6 2409:40f4:4023:5c6e:3634:ffcb:c06a:12fa  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::18a1:fbf4:1e23:5b70  prefixlen 64  scopeid 0x20<link>
+        ether a0:59:50:39:af:fd  txqueuelen 1000  (Ethernet)
+        RX packets 366636  bytes 434279827 (434.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 95158  bytes 20813192 (20.8 MB)
+        TX errors 0  dropped 8 overruns 0  carrier 0  collisions 0
+
+____________________________________________________________________________________________________________________
+
+iwconfig is used to configure and manage wireless network interfaces.
+
+dk@dk-Vivobook-ASUS:~$ iwconfig
+lo        no wireless extensions.
+
+wlo1      IEEE 802.11  ESSID:"Dhinesh"  
+          Mode:Managed  Frequency:5.22 GHz  Access Point: 56:4D:9F:AA:84:7E   
+          Bit Rate=720.6 Mb/s   Tx-Power=22 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=47/70  Signal level=-63 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:3  Invalid misc:71   Missed beacon:0
+
+mpqemubr0  no wireless extensions.
+
+tap-1e376645a40  no wireless extensions.
+
+____________________________________________________________________________________________________________________
+
+Tweaking wireless networks parameters
+
+dk@dk-Vivobook-ASUS:~$ iwlist --help
+Usage: iwlist [interface] scanning [essid NNN] [last]
+              [interface] frequency 
+              [interface] channel 
+              [interface] bitrate 
+              [interface] rate 
+              [interface] encryption 
+              [interface] keys 
+              [interface] power 
+              [interface] txpower 
+              [interface] retry 
+              [interface] ap 
+              [interface] accesspoints 
+              [interface] peers 
+              [interface] event 
+              [interface] auth 
+              [interface] wpakeys 
+              [interface] genie 
+              [interface] modulation 
+              

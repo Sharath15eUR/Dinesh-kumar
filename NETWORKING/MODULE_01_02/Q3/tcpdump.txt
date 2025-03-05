@@ -1,0 +1,39 @@
+tcpdump Packet Filters:
+
+tcpdump uses capture filters to limit the packets captured based on specific criteria. Here are some common and necessary filters:
+
+
+**Host Filters**
+
+Capture traffic to/from a specific host: host 192.168.1.1
+
+Capture traffic from a specific source: src host 192.168.1.1
+
+Capture traffic to a specific destination: dst host 192.168.1.1
+______________________________________________________________________
+
+**Network Filters**
+
+Capture traffic to/from a specific network: net 192.168.1.0/24
+
+Capture traffic from a specific source network: src net 192.168.1.0/24
+
+Capture traffic to a specific destination network: dst net 192.168.1.0/24
+_________________________________________________________________________
+
+**Port Filters**
+
+Capture traffic on a specific port: port 80
+
+Capture traffic from a specific source port: src port 80
+
+Capture traffic to a specific destination port: dst port 80
+_________________________________________________________________________
+
+**Protocol Filters**
+
+Capture TCP traffic: tcp
+
+Capture UDP traffic: udp
+
+Capture ICMP traffic: icmp
