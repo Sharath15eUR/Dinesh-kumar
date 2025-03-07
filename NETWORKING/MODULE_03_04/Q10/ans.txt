@@ -1,0 +1,39 @@
+dk@dk-Vivobook-ASUS:~$ sudo bridge fdb show
+
+01:00:5e:00:00:01 dev wlo1 self permanent
+33:33:00:00:00:01 dev wlo1 self permanent
+33:33:ff:23:5b:70 dev wlo1 self permanent
+01:00:5e:00:00:fb dev wlo1 self permanent
+33:33:ff:25:fa:9c dev wlo1 self permanent
+33:33:ff:f8:cc:de dev wlo1 self permanent
+33:33:00:00:00:fb dev wlo1 self permanent
+01:00:5e:7f:66:12 dev wlo1 self permanent
+33:33:00:00:00:01 dev mpqemubr0 self permanent
+01:00:5e:00:00:6a dev mpqemubr0 self permanent
+33:33:00:00:00:6a dev mpqemubr0 self permanent
+01:00:5e:00:00:01 dev mpqemubr0 self permanent
+01:00:5e:00:00:fb dev mpqemubr0 self permanent
+01:00:5e:7f:66:12 dev mpqemubr0 self permanent
+33:33:ff:78:75:57 dev mpqemubr0 self permanent
+33:33:00:00:00:fb dev mpqemubr0 self permanent
+52:54:00:78:75:57 dev mpqemubr0 vlan 1 master mpqemubr0 permanent
+52:54:00:78:75:57 dev mpqemubr0 master mpqemubr0 permanent
+33:33:00:00:00:01 dev docker0 self permanent
+01:00:5e:00:00:6a dev docker0 self permanent
+33:33:00:00:00:6a dev docker0 self permanent
+01:00:5e:00:00:01 dev docker0 self permanent
+01:00:5e:00:00:fb dev docker0 self permanent
+01:00:5e:7f:66:12 dev docker0 self permanent
+02:42:66:45:e0:56 dev docker0 vlan 1 master docker0 permanent
+02:42:66:45:e0:56 dev docker0 master docker0 permanent
+52:54:00:a0:c1:b9 dev tap-1e376645a40 master mpqemubr0 
+f2:ad:1a:43:53:e3 dev tap-1e376645a40 vlan 1 master mpqemubr0 permanent
+f2:ad:1a:43:53:e3 dev tap-1e376645a40 master mpqemubr0 permanent
+33:33:00:00:00:01 dev tap-1e376645a40 self permanent
+01:00:5e:00:00:01 dev tap-1e376645a40 self permanent
+33:33:ff:43:53:e3 dev tap-1e376645a40 self permanent
+33:33:00:00:00:fb dev tap-1e376645a40 self permanent
+
+Here linux acts as a=switch for existing interfaces, more of like a software switch.
+
+On pinging ans existing interface, the traffic confirms that the entryb is still active but that doesn't change the MAC table. Whereas pinging new interfaces may update the MAC table.

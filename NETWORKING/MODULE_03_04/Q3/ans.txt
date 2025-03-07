@@ -1,0 +1,9 @@
+This corresponds to steps performed in previous assignments.
+
+WORKFLOW:
+
+1. In Packet Tracer ,
+    IP can be configured by PC -> Desktop -> ip configure
+    MAC can be configured by PC -> Config -> Fast ethernet
+
+2. Network connectivity is ensured using ping (also used to generate traffic for analysis) and ipconfig /all

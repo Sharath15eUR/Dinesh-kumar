@@ -1,0 +1,11 @@
+WORKFLOW: (same stuffs in previous questiion hav been performed but using GNS3 & Wireshark)
+
+1. A network is simulated using using GNS3 
+
+2. Traffic is created using 'ping'ing
+
+3. There would be a initial ARP broadcast message that contains source and dest addresses, payload, FCS 
+
+4. And further ICMP msgs are used to check connectivity which goes from src to dest (no broadcast) as arp table knows who's (MAC address) the given ip
+
+5. These are analyzed using Wireshark
