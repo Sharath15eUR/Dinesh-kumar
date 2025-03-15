@@ -125,4 +125,4 @@ After the ping, the ARP cache on PC-A contains the following:
 - ARP Requests use broadcast to query all devices on the network.
 - ARP Replies use unicast to deliver the resolved MAC address to the requester.
 
-This assignment highlights the importance of ARP in enabling communication at the data link layer by resolving IP addresses to MAC addresses in both Wireshark captures and Packet Tracer simulations.
+
