@@ -1,0 +1,16 @@
+Router> enable
+Router# configure terminal
+
+Router(config)# interface FastEthernet0/0
+Router(config-if)# ip address 192.168.0.254 255.255.255.0
+Router(config-if)# no shutdown
+Router(config-if)# exit
+
+Router(config)# interface FastEthernet0/1
+Router(config-if)# ip address 10.10.10.1 255.255.255.0
+Router(config-if)# no shutdown
+Router(config-if)# exit
+
+Router(config)# exit
+Router# write memory
+

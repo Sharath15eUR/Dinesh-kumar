@@ -1,5 +1,7 @@
 1. DHCP Discover
+
 2. DHCP Offer
+
 3. DHCP Request
-4. DHCP Ack
-___________________
+
+4. DHCP Acknowledge

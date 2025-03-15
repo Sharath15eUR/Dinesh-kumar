@@ -1,0 +1,46 @@
+SFTP is similar to FTP, but more secure as it uses SSH encryption
+
+1. Initiating a FTP server
+
+dk@dk-Vivobook-ASUS:~$ sftp dk@localhost
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ED25519 key fingerprint is SHA256:7FrXl9dQXPi38lEI35aSvIuRbpBfqKSnurh2ZjacXgs.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'localhost' (ED25519) to the list of known hosts.
+dk@localhost's password: 
+Connected to localhost.
+
+_________________________________________________________________________________
+
+2. Use PUT to upload image in server
+
+sftp> put Pictures/Screenshots/ip.png 
+Uploading Pictures/Screenshots/ip.png to /home/dk/ip.png
+ip.png                                        100%    0     0.0KB/s   00:00    
+
+_________________________________________________________________________________
+
+3. Change directory and check
+
+sftp> lcd Pictures/Screenshots/
+
+sftp> lls
+ ip.png
+'Screenshot from 2025-02-24 11-38-35.png'
+'Screenshot from 2025-02-26 23-39-41.png'
+'Screenshot from 2025-02-26 23-39-53.png'
+'Screenshot from 2025-02-26 23-42-22.png'
+'Screenshot from 2025-02-26 23-42-31.png'
+'Screenshot from 2025-03-01 11-56-23.png'
+'Screenshot from 2025-03-01 18-22-28.png'
+'Screenshot from 2025-03-05 11-09-17.png'
+'Screenshot from 2025-03-05 11-16-03.png'
+'Screenshot from 2025-03-05 11-17-14.png'
+
+___________________________________________________________________________________
+
+4. Use GET to download image from server
+
+sftp> get ip.png
+Fetching /home/dk/ip.png to ip.png

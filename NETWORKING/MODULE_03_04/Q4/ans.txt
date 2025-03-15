@@ -1,0 +1,7 @@
+WORKFLOW:
+
+1. A simple network is created using Cisco Packet Tracer
+
+2. Check ethernet communication using
+
+3. Route (of hops) can be found out using tracerout (tracert)
