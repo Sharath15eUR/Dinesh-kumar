@@ -20,23 +20,23 @@ The aim is to set up trunk ports between switches and test connectivity between 
 
 ### Network Connections
 - **Switch 1**:
-  - `FastEthernet 0/1`: Connect to **PC1** (VLAN 10).
-  - `FastEthernet 0/2`: Connect to **PC2** (VLAN 20).
+  - `FastEthernet 0/1`: Connect to **A** (VLAN 10).
+  - `FastEthernet 0/2`: Connect to **B** (VLAN 20).
   - `FastEthernet 0/24`: Connect to Switch 2 (`FastEthernet 0/24`).
 
 - **Switch 2**:
-  - `FastEthernet 0/1`: Connect to **PC3** (VLAN 10).
-  - `FastEthernet 0/2`: Connect to **PC4** (VLAN 20).
+  - `FastEthernet 0/1`: Connect to **C** (VLAN 10).
+  - `FastEthernet 0/2`: Connect to **D** (VLAN 20).
   - `FastEthernet 0/24`: Connect to Switch 1 (`FastEthernet 0/24`).
 
 ---
 
 ### IP Address Configuration
 Each PC is assigned an IP address within its VLAN subnet:
-- **PC1 (VLAN 10)**: `192.168.10.2/24` (Gateway: `192.168.10.1`)
-- **PC2 (VLAN 20)**: `192.168.20.2/24` (Gateway: `192.168.20.1`)
-- **PC3 (VLAN 10)**: `192.168.10.3/24` (Gateway: `192.168.10.1`)
-- **PC4 (VLAN 20)**: `192.168.20.3/24` (Gateway: `192.168.20.1`)
+- **A (VLAN 10)**: `192.168.10.2/24` (Gateway: `192.168.10.1`)
+- **B (VLAN 20)**: `192.168.20.2/24` (Gateway: `192.168.20.1`)
+- **C (VLAN 10)**: `192.168.10.3/24` (Gateway: `192.168.10.1`)
+- **D (VLAN 20)**: `192.168.20.3/24` (Gateway: `192.168.20.1`)
 
 ---
 
@@ -58,7 +58,7 @@ Each PC is assigned an IP address within its VLAN subnet:
 ---
 
 ### Step 2: Assign Access Ports
-1. On Switch 1, assign ports to VLANs:
+1. On Switch 0, assign ports to VLANs:
 ```bash
     interface fastethernet 0/1
     switchport mode access
@@ -69,7 +69,7 @@ Each PC is assigned an IP address within its VLAN subnet:
     switchport access vlan 20
     exit
 ```
-2. On Switch 2, assign ports to VLANs:
+2. On Switch 1, assign ports to VLANs:
 ```bash
     interface fastethernet 0/1
     switchport mode access
@@ -83,13 +83,13 @@ Each PC is assigned an IP address within its VLAN subnet:
 ---
 
 ### Step 3: Configure Trunk Ports
-1. On Switch 1:
+1. On Switch 0:
 ```bash
     interface fastethernet 0/24
     switchport mode trunk
     exit
 ```
-2. On Switch 2:
+2. On Switch 1:
 ```bash
     interface fastethernet 0/24
     switchport mode trunk
