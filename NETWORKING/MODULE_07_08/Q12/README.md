@@ -14,10 +14,6 @@ To configure a standard access control list (ACL) on a router to permit traffic 
 
 ![Setup](images/1.%20Setup.png)
 
-### **Connections**
-1. Connect the **Router** to the **Switch** using a copper straight-through cable.
-2. Connect all **4 PCs** to the **Switch** using copper straight-through cables.
-
 ---
 
 ## IP Addressing
