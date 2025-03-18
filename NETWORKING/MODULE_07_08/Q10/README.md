@@ -134,12 +134,5 @@ Switch# show interfaces trunk
 
 ![Ping](images/5.%20PIng.png)
 
-- If successful, inter-VLAN routing is working!
-
 ---
-
-## **Expected Outcome**
-✅ PCs in different VLANs **should communicate** using the **Router-on-a-Stick** setup.
-
-🚀 If pings fail, check **trunk configuration, VLAN assignments, and IP settings**.
 
