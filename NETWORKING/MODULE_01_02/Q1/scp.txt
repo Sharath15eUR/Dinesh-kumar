@@ -1,0 +1,1 @@
+scp -r /home/dk/Desktop dk@dk-Vivobook-ASUS:/home/dk/Pictures
