@@ -1,4 +1,0 @@
-A simple LAN setup of two machines connected via switch is designed using 
-Cisco Packet Tracer and GNS3
-
-Pinging and traceroute are performed accordingly
