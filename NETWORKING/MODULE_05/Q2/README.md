@@ -56,3 +56,9 @@ You will create a network consisting of:
 - The attacker can perform **Man-in-the-Middle (MitM)** attacks, intercepting or modifying traffic.
 
 ---
+
+## **4. Practical Attack**
+
+Though ARP poisoning cannot be simulated in Packet Tracer, it can be practically executed in a real network by an attacker within the local network. Using tools like Ettercap, the attacker's system can poison the ARP cache of target hosts, allowing interception of traffic from unprotected protocols like HTTP, FTP, and Telnet, which can then be captured and analyzed.
+
+---
