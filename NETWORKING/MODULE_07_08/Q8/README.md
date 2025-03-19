@@ -12,6 +12,12 @@
 | VoIP Phone  | 192.168.20.2    | 255.255.255.0  | 192.168.20.1   | Voice Device (VLAN 20) |
 | Switch VLAN 1 | 192.168.1.1   | 255.255.255.0  | -              | Switch Management      |
 
+![Setup](images/1%20Setup.png)
+
+### **Turning on IP Phone**
+
+![PLug-in](images/2.Plug-in.png)
+
 ---
 
 ## **2. Step-by-Step Configuration**
@@ -57,6 +63,7 @@ Switch(config)# interface Fa0/1
 Switch(config-if)# mls qos trust cos
 Switch(config-if)# exit
 ```
+![Switch](images/3.%20Switch%20config.png)
 
 ---
 
@@ -127,3 +134,8 @@ Default Gateway: 192.168.20.1
 ### **Quality of Service (QoS):**
 - Enabling QoS ensures that voice traffic gets higher priority over data traffic, which is critical for minimizing latency and jitter.
 
+---
+
+I tried to set up IP address of IP Phone but unable to set it using setting in GUI of IP Phone.
+
+---
