@@ -9,7 +9,7 @@ Backhaul refers to the connection between the router and the internet. Common ba
 
 ---
 
-# 2. My Wireless Internet Backhaul* 
+# 2. My Wireless Internet Backhaul
 I’m using **Jio Air Fiber**, which typically relies on a **4G/5G Cellular Backhaul**.  
 
 ---
