@@ -59,11 +59,3 @@ These are successive Wi-Fi security protocols developed to protect wireless netw
 - **WPA3:** Strongest, modern, future-proof standard.
 
 ---
-
-## **Conclusion**
-
-- Upgrade to **WPA3** wherever possible.
-- **WEP and WPA** are obsolete and should not be used for securing any network today.
-- **WPA2** remains common but moving to **WPA3** ensures maximum Wi-Fi security.
-
----

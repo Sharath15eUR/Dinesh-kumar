@@ -1,69 +1,41 @@
-# Difference Between WEP, WPA, WPA2, and WPA3
+# Why WEP is Considered Insecure Compared to WPA2 or WPA3
 
-These are successive Wi-Fi security protocols developed to protect wireless networks, each improving upon its predecessor.
-
----
-
-## **WEP (Wired Equivalent Privacy)**
-
-- **Introduced:** 1997 (original 802.11 standard)
-- **Security Level:** Very weak  
-- **Encryption Used:** RC4 stream cipher with 40/104-bit keys
-- **Issues:**  
-  - Vulnerable to key cracking within minutes  
-  - Poor key management and reuse
+WEP was the original Wi-Fi security protocol but is now considered highly insecure due to major design flaws and weak encryption methods.
 
 ---
 
-## **WPA (Wi-Fi Protected Access)**
+## **Reasons for WEP Insecurity**
 
-- **Introduced:** 2003 (interim solution after WEP failure)
-- **Security Level:** Improved but still vulnerable
-- **Encryption Used:** TKIP (Temporal Key Integrity Protocol)
-- **Issues:**  
-  - Designed as a patch to WEP  
-  - Vulnerable to TKIP attacks
+1. **Weak Encryption Algorithm**  
+   - Uses RC4 with short 40/104-bit keys, easily breakable.
+   - Initialization Vectors (IVs) are too small (24 bits) and repeat frequently.
 
----
+2. **Poor Key Management**  
+   - Keys are manually set and rarely changed, making networks vulnerable over time.
 
-## **WPA2 (Wi-Fi Protected Access II)**
+3. **Vulnerability to Attacks**  
+   - Tools can crack WEP keys in minutes using passive eavesdropping and IV collection.
+   - Attacks like FMS (Fluhrer, Mantin, Shamir) exploit WEP’s weak IV implementation.
 
-- **Introduced:** 2004
-- **Security Level:** Strong (industry standard for many years)
-- **Encryption Used:** AES (Advanced Encryption Standard)
-- **Features:**  
-  - Robust Security Network (RSN)  
-  - Mandatory AES-based CCMP encryption
-- **Issues:**  
-  - Susceptible to KRACK (Key Reinstallation Attack) if improperly configured
+4. **No Protection Against Replay Attacks**  
+   - WEP cannot detect if an attacker reuses captured packets to gain unauthorized access.
 
 ---
 
-## **WPA3 (Wi-Fi Protected Access III)**
+## **Comparison to WPA2 and WPA3**
 
-- **Introduced:** 2018
-- **Security Level:** Very strong (current best practice)
-- **Encryption Used:** AES with stronger 192-bit security in WPA3-Enterprise
-- **Features:**  
-  - SAE (Simultaneous Authentication of Equals) for better protection against brute-force attacks  
-  - Forward secrecy  
-  - Improved security even with weak passwords
+| Feature           | WEP                    | WPA2                    | WPA3                      |
+|-------------------|-------------------------|--------------------------|----------------------------|
+| Encryption        | RC4 (weak)              | AES (strong)             | AES (stronger with 192-bit) |
+| Key Management    | Static Keys             | Dynamic Key Management   | Dynamic + SAE Authentication |
+| Attack Resistance | Very low                | High (with WPA2-Enterprise) | Very high (even against brute-force) |
 
 ---
 
 ## **Key Points**
 
-- **WEP:** Basic, outdated, insecure.
-- **WPA:** Quick fix for WEP, still weak.
-- **WPA2:** Strong AES encryption, widely used.
-- **WPA3:** Strongest, modern, future-proof standard.
-
----
-
-## **Conclusion**
-
-- Upgrade to **WPA3** wherever possible.
-- **WEP and WPA** are obsolete and should not be used for securing any network today.
-- **WPA2** remains common but moving to **WPA3** ensures maximum Wi-Fi security.
+- WEP can be cracked within minutes, even by amateur attackers.
+- WPA2 introduced strong AES encryption and dynamic keys.
+- WPA3 further improved security with SAE and forward secrecy.
 
 ---
